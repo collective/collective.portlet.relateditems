@@ -1,6 +1,8 @@
 collective.portlet.relateditems
 =================================
 
+.. contents::
+
 Overview
 --------
 
@@ -18,14 +20,27 @@ Options
 
 The portlet has the following options available to it on the Add screen.
 
-count
+- *count*
     This is the number of recent items that will be shown in the portlet.
 
-states
+- *states*
     The workflow states the items must be in to be shown in the portlet.
 
-allowed_types
+- *allowed_types*
     The allowed types to be shown in the portlet and the 'more...' link search
 
-show_all_types
+- *show_all_types*
     Choose whether or not all types should be available for the 'more...' link.  This will search for all content types when clicking on 'more...'
+
+- *portlet_title*
+    Title in portlet.
+
+- *only_subject*
+    If selected, we will search only on content subject.
+
+- *display_all_fallback*
+    If selected, we will display all llowed items where there are no results for our current related items query
+
+- *display_description*
+    If selected, we will show the content short description
+
