@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<portlets xmlns:i18n="http://namespaces.zope.org/i18n"
+          i18n:domain="collective.portlet.relateditems">
+
+ <!-- Portlet type registrations -->
+
+ <portlet
+   addview="collective.portlet.relateditems.RelatedItems"
+   title="Related Items"
+   description=""
+   />
+
+</portlets>

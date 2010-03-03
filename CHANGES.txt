@@ -1,0 +1,57 @@
+Change History
+==============
+
+0.3.0 2009-12-30
+----------------
+
+- Related items use image tile instead of thumb.
+
+0.2.9 2009-05-27
+----------------
+
+- Minor changes regarding the dates of events.
+
+0.2.6 2009-05-07
+----------------
+
+- Bug fix.
+- Added classes to improve CSS.
+
+0.2.5 2009-05-01
+----------------
+
+- Bug fix: hard dependency to contentleadimage removed.
+
+0.2.4 2009-04-30
+----------------
+
+- Bug fix: files types like Image and File did not appeared in sea.
+- Bug fix: portlet rendered bug in admin pages.
+- Bug fix: title of non folder items (with references) was not included in the search.
+
+0.2.3 2009-04-03
+----------------
+
+- Bug fix: related items did not appear in some collections.
+
+0.2.2 2009-03-31
+----------------
+
+- Manual selected related items are used as a search query (references and backreferences);
+
+0.2.1 2009-03-26
+----------------
+
+- Bug fix: related items did not appear in some collections.
+
+0.2 2009-03-25
+--------------
+
+- Related items for folderish items (folder, collection, etc)
+
+0.1 2009-03-23
+--------------
+
+- Initial package structure.
+  [zopeskel]
+

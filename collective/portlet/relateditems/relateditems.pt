@@ -1,0 +1,60 @@
+<dl class="portlet portletRelatedItems"
+    i18n:domain="collective.portlet.relateditems">
+
+    <dt class="portletHeader relatedHeader">
+        <span class="portletTopLeft"></span>
+        <span i18n:translate="header_related_items">
+           Related Items
+        </span>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <tal:rep tal:define="related_items view/getRelatedItems;"
+             tal:repeat="item related_items">
+        <dd tal:define="oddrow repeat/item/odd;
+                        plone_view context/@@plone;
+                        getIcon nocall:plone_view/getIcon;
+                		toLocalizedTime nocall:plone_view/toLocalizedTime;
+                        item_has_leadimage item/hasContentLeadImage;
+                        item_object item/getObject;"
+            tal:attributes="class python:oddrow and 'portletItem even' or 'portletItem odd'">
+	
+            <a href=""
+               tal:attributes="href string:${item/getURL}/view;
+                               title item/Description">
+                <img src="" alt=""
+                     tal:condition="exists:item_object/image_tile"
+                     tal:replace="structure python: path('nocall:item_object/tag')(scale='tile', css_class='relatedImage')" />
+             	<img src="" alt="" class="relatedImage"
+                             tal:condition="item_has_leadimage"
+                             tal:attributes="src python:item.getURL() + '/leadImage_tile'" />
+				<span class="relatedTitle" tal:content="item/Title"></span></a>
+                
+				<div tal:define="showTime python:item.start.TimeMinutes() != '00:00'
+and item.end.TimeMinutes() != '00:00'" tal:omit-tag="">
+					<span tal:condition="python:item.end < view.currenttime()" tal:omit-tag="">
+						<span class="relatedDate pastDate" tal:content="python:toLocalizedTime(item.start, long_format=showTime)">
+		                May 5
+		                </span>
+					</span>
+					<span tal:condition="python:item.end >= view.currenttime()" tal:omit-tag="">
+						<span class="relatedDate futureDate" tal:content="python:toLocalizedTime(item.start, long_format=showTime)">
+		                May 5
+		                </span>
+					</span>
+				</div>
+				<p class="relatedDiscription" tal:content="python:view.trimDescription(item.Description)">Discription </p>							
+				<div class="visualClear"></div> 
+        </dd>
+    </tal:rep>
+
+    <dd class="portletFooter"
+        tal:condition="view/showRelatedItemsLink">
+        <span class="portletBotomLeft"></span>
+        <span>
+           <a href="" tal:attributes="href view/getAllRelatedItemsLink" i18n:translate="link_more">more ...</a>
+        </span>
+        <span class="portletBottomRight"></span>
+    </dd>
+
+</dl>

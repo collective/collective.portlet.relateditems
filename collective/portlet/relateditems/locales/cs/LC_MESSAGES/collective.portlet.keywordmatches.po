@@ -1,0 +1,70 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.portlet.relateditems\n"
+"POT-Creation-Date: 2008-09-03 07:49+0000\n"
+"PO-Revision-Date: 2008-09-03 09:48+0100\n"
+"Last-Translator: Radim Novotny <novotny.radim@gmail.com>\n"
+"Language-Team: Czech <cs@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ./relateditems.py:157
+msgid "Add Related Items Portlet"
+msgstr "Přidat portlet s příbuznými položkami podle klíčových slov"
+
+#: ./relateditems.py:55
+msgid "Allowed Types"
+msgstr "Povolené typy"
+
+#: ./relateditems.py:175
+msgid "Edit Related Items Portlet"
+msgstr "Úpravy"
+
+#: ./relateditems.py:39
+msgid "How many related items to list."
+msgstr "Kolik položek zobrazit"
+
+#: ./relateditems.py:66
+msgid "If selected, the 'more' link will display results from all content types instead of restricting to the 'Allowed Types'."
+msgstr "Pokud je zaškrtnuto, odkaz na více položek zobrazí všechny typyp polože a ne jen ty vybrané výše."
+
+#: ./relateditems.py:46
+msgid "Items in which workflow state to show."
+msgstr "Vyberte, v jakém workflow stavu se mohou nacházat položky zobrazené v portletu."
+
+#: ./relateditems.py:38
+msgid "Number of related items to display"
+msgstr "Počet podobných položek k zobrazení"
+
+#: ./relateditems.py:56
+msgid "Select the content types that should be shown."
+msgstr "Vyberte, jaké typy položek se mají vyhledávat"
+
+#: ./relateditems.py:65
+msgid "Show all types in 'more' link"
+msgstr "Po klepnutí na \"více\" zobrazit všechny typy položek."
+
+#: ./relateditems.py:158
+msgid "This portlet displays recent Related Items based on keywords matches."
+msgstr "Portlet zobrazuje položky se stejnými klíčovými slovy"
+
+#: ./relateditems.py:45
+msgid "Workflow state"
+msgstr "Stav"
+
+#. Default: "Related Items"
+#: ./relateditems.pt:6
+msgid "header_related_items"
+msgstr "Podobné články"
+
+#. Default: "more ..."
+#: ./relateditems.pt:32
+msgid "link_more"
+msgstr "více ..."
+
