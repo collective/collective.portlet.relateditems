@@ -44,3 +44,10 @@ The portlet has the following options available to it on the Add screen.
 - *display_description*
     If selected, we will show the content short description
 
+Repository
+------------
+ * plone `svn-collective`_
+
+.. _svn-collective: http://svn.plone.org/svn/collective/collective.portlet.relateditems/
+
+
