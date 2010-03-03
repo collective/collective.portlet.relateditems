@@ -1,6 +1,20 @@
 Change History
 ==============
 
+0.3.2 Unreleased
+-------------------
+
+0.3.1 - 2010-03-05 
+-------------------
+
+- Fix ImportException -> ImportError [kiorky]
+- Fix leadimage checks when you don't have leadimage [kiorky]
+- Let the use filter only on subject if he wants [kiorky]
+- Let the user configure if he want to use the last items
+  where there are no related items found as a fallback [kiorky]
+- Let the user choose the portlet title [kiorky]
+- Let the user choose to display the content description  [kiorky]
+
 0.3.0 2009-12-30
 ----------------
 

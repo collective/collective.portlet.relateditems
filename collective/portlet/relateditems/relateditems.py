@@ -28,9 +28,9 @@ try:
     from zope.component import getUtility
     from Products.CMFPlone.interfaces import IPloneSiteRoot
     LEADIMAGE_EXISTS = True
-except ImportException:
+except ImportError:
     LEADIMAGE_EXISTS = False
-    
+
 
 _N_CHAR = 100
 
@@ -43,7 +43,7 @@ DEFAULT_ALLOWED_TYPES = (
 )
 
 
-# used to sanitize search    
+# used to sanitize search
 def quotestring(s):
     return '"%s"' % s
 
@@ -52,8 +52,8 @@ def quote_bad_chars(s):
     for char in bad_chars:
         s = s.replace(char, quotestring(char))
     return s
-    
-    
+
+
 class IRelatedItems(IPortletDataProvider):
     """A portlet
 
@@ -61,7 +61,14 @@ class IRelatedItems(IPortletDataProvider):
     data that is being rendered and the portlet assignment itself are the
     same.
     """
-    
+
+    portlet_title = schema.TextLine(
+        title=_(u'Portlet title'),
+        description=_(u'Title in portlet.'),
+        required=True,
+        default=u'Related Items'
+    )
+
     count = schema.Int(
         title=_(u'Number of related items to display'),
         description=_(u'How many related items to list.'),
@@ -88,7 +95,7 @@ class IRelatedItems(IPortletDataProvider):
             vocabulary="plone.app.vocabularies.ReallyUserFriendlyTypes"
         )
     )
-    
+
     show_all_types = schema.Bool(
         title=_(u"Show all types in 'more' link"),
         description=_(u"If selected, the 'more' link will display "
@@ -97,6 +104,25 @@ class IRelatedItems(IPortletDataProvider):
         default=False,
     )
 
+    only_subject = schema.Bool(
+        title=_(u"Search only on subject"),
+        description=_(u"If selected, we will search only on content subject.") ,
+        default=False,
+    )
+
+    display_all_fallback = schema.Bool(
+        title=_(u"Display recent items on no results fallback"),
+        description=_(u"If selected, we will display all "
+                      "allowed items where there are no results for "
+                      "our current related items query"),
+        default=True,
+    )
+
+    display_description = schema.Bool(
+        title=_(u"Display description"),
+        description=_(u"If selected, we will show the content short description"),
+        default=True,
+    )
     """"
     show_recent_items = schema.Bool(
         title=_(u"Show recent items"),
@@ -116,17 +142,26 @@ class Assignment(base.Assignment):
 
     implements(IRelatedItems)
 
-    def __init__(self, 
+    def __init__(self,
+                 portlet_title = u'Related Items',
                  count=5,
                  states=('published',),
                  allowed_types=DEFAULT_ALLOWED_TYPES,
                  #show_recent_items=False,
-                 show_all_types=False):
+                 only_subject = False,
+                 show_all_types=False,
+                 display_description = True,
+                 display_all_fallback = True,
+                ):
+        self.portlet_title = portlet_title
         self.count = count
         self.states = states
         self.allowed_types = allowed_types
+        self.only_subject=only_subject,
         #self.show_recent_items = show_recent_items
         self.show_all_types = show_all_types
+        self.display_description = display_description
+        self.display_all_fallback = display_all_fallback
 
     @property
     def title(self):
@@ -143,7 +178,7 @@ class Renderer(base.Renderer):
     of this class. Other methods can be added and referenced in the template.
     """
     _template = ViewPageTemplateFile('relateditems.pt')
-    
+
     @ram.cache(render_cachekey)
     def render(self):
         return xhtml_compress(self._template())
@@ -167,6 +202,13 @@ class Renderer(base.Renderer):
             return True
         return False
 
+    def hasLeadImage(self):
+        return LEADIMAGE_EXISTS
+
+    def itemHasLeadImage(self, item):
+        if self.hasLeadImage():
+            return item.hasContentLeadImage
+
     def currenttime(self):
         return time.time()
 
@@ -177,7 +219,7 @@ class Renderer(base.Renderer):
             portal = getUtility(IPloneSiteRoot)
             res = ILeadImagePrefsForm(portal)
         return res
-    
+
     #used for the view (relateditems.pt)
     def tag(self, obj, css_class='tileImage'):
         if LEADIMAGE_EXISTS:
@@ -188,11 +230,11 @@ class Renderer(base.Renderer):
                     scale = 'thumb' #self.prefs.desc_scale_name
                     return field.tag(context, scale=scale, css_class=css_class)
         return ''
-    
+
     def getAllRelatedItemsLink(self):
         portal_state = getMultiAdapter((self.context, self.request),
                                        name=u'plone_portal_state')
-        portal_url = portal_state.portal_url()        
+        portal_url = portal_state.portal_url()
         context = aq_inner(self.context)
         req_items = {}
         # make_query renders tuples literally, so let's make it a list
@@ -209,7 +251,7 @@ class Renderer(base.Renderer):
                 return res
         else:
                 return desc
-    
+
     def _contents(self):
         contents = []
         # Collection
@@ -224,24 +266,26 @@ class Renderer(base.Renderer):
 
         # Make sure the content is not too big
         contents = contents[:6]
-              
-        return contents    
- 
+
+        return contents
+
     def _itemQuery(self, value):
         search_query = []
-        
+
         # Include categories in the search query
-        #keywords = map(lambda x: x.lower(), value.Subject())        
+        #keywords = map(lambda x: x.lower(), value.Subject())
         keywords = list(value.Subject())
 
         # Include words from title in the search query
         title = value.Title().split()
-                
+
         search_query = title + keywords
-        
+
         # Filter out boolean searches and keywords with only one letter
-        search_query = [res for res in search_query if not res in ['not','and','or'] and len(res)!=1]
-        
+        search_query = [res
+                        for res in search_query
+                        if not res in ['not','and','or'] and len(res)!=1]
+
         return search_query
 
     def _itemsQuery(self, values):
@@ -249,15 +293,15 @@ class Renderer(base.Renderer):
         items = []
         for item in values:
             items += self._itemQuery(item)
-        
+
         # remove duplicated search keywords
         items = self.uniq(items)
-        
+
         #if len(items):
         #    query = items.pop(0)
-                
+
         query = " OR ".join(items)
-                        
+
         return query
 
     def uniq(self, alist):    # Fastest order preserving
@@ -285,26 +329,32 @@ class Renderer(base.Renderer):
                 contents += context.getBackReferences()
             except Exception, e:
                 pass
-     
+
         contents += folder_contents
-        
+
         search_query = self._itemsQuery(contents)
         return search_query
-            
+
+    def getPortletTitle(self):
+        return _(self.data.portlet_title)
+
+    def displayDescription(self):
+        return self.data.display_description
+
     @memoize
     def _data(self):
         plone_tools = getMultiAdapter((self.context, self.request),
                                       name=u'plone_tools')
         context = aq_inner(self.context)
         here_path = ('/').join(context.getPhysicalPath())
-                
+
         # Exclude items from related if contained in folderish
         content = []
         if self.context.isPrincipiaFolderish:
             content = self._contents()
 
         exclude_items = map(lambda x: x.getPath(), content)
-        exclude_items += [here_path]  
+        exclude_items += [here_path]
 
         search_query = self._query()
         search_query = quote_bad_chars(search_query)
@@ -315,29 +365,33 @@ class Renderer(base.Renderer):
         # increase by one since we'll get the current item
         extra_limit = limit + len(exclude_items)
 
-        results = catalog(portal_type = self.data.allowed_types,
-                          SearchableText = search_query,
-                          sort_limit=extra_limit)
-                          #Subject=keywords,
-                          #review_state=self.data.states,
-                          #sort_on='Date',
-                          #sort_order='reverse',
+        query = dict(portal_type = self.data.allowed_types,
+                     SearchableText = search_query,
+                     sort_limit=extra_limit)
+        if self.data.only_subject:
+            query['Subject'] = self.context.Subject()
+            if 'SearchableText' in query:
+                del query['SearchableText']
+        results = catalog(**query)
 
+        # filter out the current item
+        self.all_results = [res
+                            for res in results
+                            if not res.getPath() in exclude_items]
 
-        # filter out the current item        
-        self.all_results = [res for res in results if not res.getPath() in exclude_items]
-        
         # No related items were found
         # Get the latest modified articles
 
         #if self.data.show_recent_items and self.all_results == []:
-        if self.all_results == []:
+        if self.data.display_all_fallback and (self.all_results == []):
             results = catalog(portal_type = self.data.allowed_types,
                               sort_on='modified',
                               sort_order='reverse',
-                              sort_limit=extra_limit)        
-            self.all_results = [res for res in results if not res.getPath() in exclude_items]
-         
+                              sort_limit=extra_limit)
+            self.all_results = [res
+                                for res in results
+                                if not res.getPath() in exclude_items]
+
         return self.all_results[:limit]
 
 class AddForm(base.AddForm):
@@ -352,12 +406,18 @@ class AddForm(base.AddForm):
     description = _(u"This portlet displays recent Related Items.")
 
     def create(self, data):
-        return Assignment(count=data.get('count', 5),
-                          states=data.get('states', ('published',)),
-                          allowed_types=data.get('allowed_types', 
-                                                DEFAULT_ALLOWED_TYPES),
-                          #show_recent_items=data.get('show_recent_items', False),
-                          show_all_types=data.get('show_all_types', False))
+        return Assignment(
+            portlet_title = data.get('title', u'Related Items'),
+            count=data.get('count', 5),
+            states=data.get('states', ('published',)),
+            allowed_types=data.get('allowed_types',
+                                   DEFAULT_ALLOWED_TYPES),
+            #show_recent_items=data.get('show_recent_items', False),
+            only_subject=data.get('only_subject', False),
+            show_all_types=data.get('show_all_types', False),
+            display_all_fallback = data.get('display_all_fallback', True),
+            display_description = data.get('display_description', True),
+        )
 
 class EditForm(base.EditForm):
     """Portlet edit form.
