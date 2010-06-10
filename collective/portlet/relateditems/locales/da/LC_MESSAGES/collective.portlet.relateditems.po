@@ -1,19 +1,16 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.portlet.relateditems\n"
 "POT-Creation-Date: 2010-06-10 11:42+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2010-06-10 11:42+0000\n"
+"Last-Translator: Roman Kozlovskiy <kroman0@quintagroup.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: da\n"
+"Language-Name: Danish\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.portlet.relateditems\n"
 
@@ -100,5 +97,5 @@ msgstr ""
 #. Default: "more ..."
 #: ./relateditems.pt:55
 msgid "link_more"
-msgstr ""
+msgstr "Se alle"
 
