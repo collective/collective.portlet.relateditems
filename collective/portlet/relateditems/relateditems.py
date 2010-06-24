@@ -66,7 +66,7 @@ class IRelatedItems(IPortletDataProvider):
         title=_(u'Portlet title'),
         description=_(u'Title in portlet.'),
         required=True,
-        default=u'Related Items'
+        default=_(u'Related Items')
     )
 
     count = schema.Int(
@@ -168,7 +168,7 @@ class Assignment(base.Assignment):
         """This property is used to give the title of the portlet in the
         "manage portlets" screen.
         """
-        return "Related Items"
+        return _(u"Related Items")
 
 class Renderer(base.Renderer):
     """Portlet renderer.

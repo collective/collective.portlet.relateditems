@@ -8,6 +8,7 @@
    addview="collective.portlet.relateditems.RelatedItems"
    title="Related Items"
    description=""
+   i18n:attributes="title Related Items;"
    />
 
 </portlets>
