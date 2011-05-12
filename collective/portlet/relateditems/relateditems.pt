@@ -52,7 +52,7 @@ and item.end.TimeMinutes() != '00:00'" tal:omit-tag="">
         tal:condition="view/showRelatedItemsLink">
         <span class="portletBotomLeft"></span>
         <span>
-           <a href="" tal:attributes="href view/getAllRelatedItemsLink" i18n:translate="link_more">more ...</a>
+           <a href="" tal:attributes="href view/getAllRelatedItemsLink" i18n:translate="more_url">more ...</a>
         </span>
         <span class="portletBottomRight"></span>
     </dd>
