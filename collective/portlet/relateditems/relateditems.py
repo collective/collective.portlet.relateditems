@@ -284,7 +284,7 @@ class Renderer(base.Renderer):
         # Filter out boolean searches and keywords with only one letter
         search_query = [res
                         for res in search_query
-                        if not res in ['not','and','or'] and len(res)!=1]
+			if not res.lower() in ['not','and','or'] and len(res)!=1]
 
         return search_query
 

@@ -1,7 +1,7 @@
 import os
 from setuptools import setup, find_packages
 
-version = '0.3.1'
+version = '0.3.3'
 
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
@@ -25,9 +25,9 @@ setup(name='collective.portlet.relateditems',
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
       keywords='related, categories, keywords',
-      author='Rui Guerra <rui@v2.nl>, kiorky <kiorky@cryptelium.net>',
-      #author_email='rui AT v2 DOT nl',
-      #url='https://svn.v2.nl/plone/collective.portlet.relateditems/',
+      author='Rui Guerra, kiorky',
+      author_email='rui AT v2 DOT nl, kiorky <kiorky@cryptelium.net>, David Jonas <david@intk.com>',
+      url='https://svn.v2.nl/plone/collective.portlet.relateditems/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective', 'collective.portlet'],
