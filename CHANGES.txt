@@ -1,9 +1,14 @@
 Change History
 ==============
 
+0.3.4 - 2011-05-17 
+------------------
+- adapting to changes in Plone 4.1 (thanks to Daniel Marks/Netsight Internet Solutions)
+
 0.3.3 - 2011-05-12 
 ------------------
-- Merging some i18n features [DavidJonas] 
+- Merging some i18n features [DavidJonas]
+- Translations Danish and Czech thanks to Roman Kozlovskiy and Radim Novotny 
  
 0.3.2 - 2011-02-15
 -------------------
