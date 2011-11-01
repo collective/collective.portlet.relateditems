@@ -168,7 +168,7 @@ class Assignment(base.Assignment):
         """This property is used to give the title of the portlet in the
         "manage portlets" screen.
         """
-        return _(u"Related Items")
+        return self.portlet_title or _(u"Related Items")
 
 class Renderer(base.Renderer):
     """Portlet renderer.
@@ -336,7 +336,7 @@ class Renderer(base.Renderer):
         return search_query
 
     def getPortletTitle(self):
-        return _(self.data.portlet_title)
+        return self.data.portlet_title
 
     def displayDescription(self):
         return self.data.display_description
@@ -407,7 +407,7 @@ class AddForm(base.AddForm):
 
     def create(self, data):
         return Assignment(
-            portlet_title = data.get('title', u'Related Items'),
+            portlet_title = data.get('portlet_title', u'Related Items'),
             count=data.get('count', 5),
             states=data.get('states', ('published',)),
             allowed_types=data.get('allowed_types',
