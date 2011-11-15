@@ -1,102 +1,102 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: collective.portlet.relateditems\n"
+"Project-Id-Version: collective.portlet.relateditems 0.x\n"
 "POT-Creation-Date: 2011-11-15 15:03+0000\n"
-"PO-Revision-Date: 2010-06-10 11:42+0000\n"
-"Last-Translator: Roman Kozlovskiy <kroman0@quintagroup.com>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: da\n"
-"Language-Name: Danish\n"
+"Language-Code: nl\n"
+"Language-Name: Nederlands\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.portlet.relateditems\n"
 
 #: ./relateditems.py:409
 msgid "Add Related Items Portlet"
-msgstr "Tilføj auto-relateret indhold"
+msgstr ""
 
 #: ./relateditems.py:90
 msgid "Allowed Types"
-msgstr "Tilladte indholdstyper"
+msgstr ""
 
 #: ./relateditems.py:122
 msgid "Display description"
-msgstr "Vis beskrivelse"
+msgstr ""
 
 #: ./relateditems.py:114
 msgid "Display recent items on no results fallback"
-msgstr "Vis seneste indhold, hvis ikke noget matcher"
+msgstr ""
 
 #: ./relateditems.py:434
 msgid "Edit Related Items Portlet"
-msgstr "Rediger auto-relateret indhold"
+msgstr ""
 
 #: ./relateditems.py:74
 msgid "How many related items to list."
-msgstr "Skriv mange links til relateret indhold der maksimalt skal medtages"
+msgstr ""
 
 #: ./relateditems.py:101
 msgid "If selected, the 'more' link will display results from all content types instead of restricting to the 'Allowed Types'."
-msgstr "Hvis du krydser af, vil der optræde et 'mere'-link som vil vise resultater fra alle indholdstyper i stedet for at begrænse det til 'Tilladte indholdstyper'"
+msgstr ""
 
 #: ./relateditems.py:115
 msgid "If selected, we will display all allowed items where there are no results for our current related items query"
-msgstr "Kryds af, hvis portletten skal vise indhold, der ikke nødvendigvis matcher som 'fyld' i det tilfælde hvor der ikke er relateret indhold"
+msgstr ""
 
 #: ./relateditems.py:109
 msgid "If selected, we will search only on content subject."
-msgstr "Kryds af, hvis portletten kun skal finde relateret indhold ved at sammenligne indholdets emneord"
+msgstr ""
 
 #: ./relateditems.py:123
 msgid "If selected, we will show the content short description"
-msgstr "Kryds af, hvis portletten skal medtage en kort beskrivelse af det relatede indhold"
+msgstr ""
 
 #: ./relateditems.py:81
 msgid "Items in which workflow state to show."
-msgstr "Vælg de workflow-tilstande som indholdet må have"
+msgstr ""
 
 #: ./relateditems.py:73
 msgid "Number of related items to display"
-msgstr "Antal links"
+msgstr ""
 
 #: ./relateditems.py:66
 msgid "Portlet title"
-msgstr "Portlet titel"
+msgstr ""
 
 #: ./relateditems.py:69
 msgid "Related Items"
-msgstr "Autorelateret indhold portlet"
+msgstr ""
 
 #: ./relateditems.py:108
 msgid "Search only on subject"
-msgstr "Søg kun på emneord"
+msgstr ""
 
 #: ./relateditems.py:91
 msgid "Select the content types that should be shown."
-msgstr "Vælg hvilke indholdstyper, som det relaterede indhold må have"
+msgstr ""
 
 #: ./relateditems.py:100
 msgid "Show all types in 'more' link"
-msgstr "Vis alle indholdstyper, når man klikker på 'mere'-linket"
+msgstr ""
 
 #: ./relateditems.py:410
 msgid "This portlet displays recent Related Items."
-msgstr "Denne portlet viser automatisk nyest relateret indhold"
+msgstr ""
 
 #: ./relateditems.py:435
 msgid "This portlet displays related items based on keywords matches, title and related items."
-msgstr "Denne portlet viser automatisk relateret indhold baseret på tilsvarende emneord, title og valgt relateret indhold."
+msgstr ""
 
 #: ./relateditems.py:67
 msgid "Title in portlet."
-msgstr "Skriv den overskrift, der skal optræde i toppen af portletten"
+msgstr ""
 
 #: ./relateditems.py:80
 msgid "Workflow state"
-msgstr "Workflow tilstand"
+msgstr ""
 
 #. Default: "more ..."
 #: ./relateditems.pt:55
