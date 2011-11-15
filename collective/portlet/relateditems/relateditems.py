@@ -159,7 +159,7 @@ class Assignment(base.Assignment):
         self.count = count
         self.states = states
         self.allowed_types = allowed_types
-        self.only_subject = only_subject,
+        self.only_subject = only_subject
         #self.show_recent_items = show_recent_items
         self.show_all_types = show_all_types
         self.display_description = display_description

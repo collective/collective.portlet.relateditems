@@ -4,6 +4,9 @@ Change History
 0.3.5 (unreleased)
 ------------------
 
+- Fixed error where 'only_subject' was always True after portlet creation.
+  [maurits]
+
 - Restored compatibility with earlier Plone versions by loading the
   CMFCore permissions.zcml only on Plone 4.1 or higher.
   [maurits]
