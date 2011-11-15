@@ -34,12 +34,27 @@
 #
 #
 #
-ignore="
-collective.portlet.relateditems.egg-info
+ignore_default="
 *.mo
-
+*.pyc
+*.pyo
 "
-svn propset -R svn:ignore "$ignore" .
+svn propset -R svn:ignore "$ignore_default" .
+ignore_root="
+collective.portlet.relateditems.egg-info
+.installed.cfg
+bin
+build
+develop-eggs
+dist
+downloads
+eggs
+fake-eggs
+parts
+var
+"
+svn propset svn:ignore "$ignore_root" .
+svn update
 svn ci -m "resetting svnignore"
 
 # vim:set et sts=4 ts=4 tw=80:
