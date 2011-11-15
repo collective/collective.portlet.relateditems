@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: collective.portlet.relateditems 0.x\n"
 "POT-Creation-Date: 2011-11-15 15:03+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2011-11-15 16:49+0100\n"
+"Last-Translator: Maurits van Rees <m.van.rees@zestsoftware.nl>\n"
+"Language-Team: Plone Nederland <plone-nl@lists.plone.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,90 +16,90 @@ msgstr ""
 
 #: ./relateditems.py:409
 msgid "Add Related Items Portlet"
-msgstr ""
+msgstr "Voeg Gerelateerde items portlet toe"
 
 #: ./relateditems.py:90
 msgid "Allowed Types"
-msgstr ""
+msgstr "Toegestane types"
 
 #: ./relateditems.py:122
 msgid "Display description"
-msgstr ""
+msgstr "Toon beschrijving"
 
 #: ./relateditems.py:114
 msgid "Display recent items on no results fallback"
-msgstr ""
+msgstr "Val terug op tonen van recente items als er geen andere resultaten."
 
 #: ./relateditems.py:434
 msgid "Edit Related Items Portlet"
-msgstr ""
+msgstr "Bewerk Gerelateerde items portlet"
 
 #: ./relateditems.py:74
 msgid "How many related items to list."
-msgstr ""
+msgstr "Hoeveel items te tonen"
 
 #: ./relateditems.py:101
 msgid "If selected, the 'more' link will display results from all content types instead of restricting to the 'Allowed Types'."
-msgstr ""
+msgstr "Indien ingeschakeld, toont de 'meer' link resultaten van alle content types in plaats van deze te beperken tot de 'Toegestande types'."
 
 #: ./relateditems.py:115
 msgid "If selected, we will display all allowed items where there are no results for our current related items query"
-msgstr ""
+msgstr "Indien ingeschakeld, tonen we alle toegestane items als er geen resultaten zijn voor de huidige gerelateerde items zoekopdracht."
 
 #: ./relateditems.py:109
 msgid "If selected, we will search only on content subject."
-msgstr ""
+msgstr "Indien ingeschakeld, zoeken we alleen op de onderwerp (categorie, tags) van de content."
 
 #: ./relateditems.py:123
 msgid "If selected, we will show the content short description"
-msgstr ""
+msgstr "Indien ingeschakeld, tonen we de beschrijving van de content"
 
 #: ./relateditems.py:81
 msgid "Items in which workflow state to show."
-msgstr ""
+msgstr "Toon items met deze workflow statussen."
 
 #: ./relateditems.py:73
 msgid "Number of related items to display"
-msgstr ""
+msgstr "Aantal gerelateerde items om te tonen"
 
 #: ./relateditems.py:66
 msgid "Portlet title"
-msgstr ""
+msgstr "Titel van de portlet"
 
 #: ./relateditems.py:69
 msgid "Related Items"
-msgstr ""
+msgstr "Gerelateerde items"
 
 #: ./relateditems.py:108
 msgid "Search only on subject"
-msgstr ""
+msgstr "Zoek alleen op onderwerp"
 
 #: ./relateditems.py:91
 msgid "Select the content types that should be shown."
-msgstr ""
+msgstr "Selecteer de content types die getoond moeten worden."
 
 #: ./relateditems.py:100
 msgid "Show all types in 'more' link"
-msgstr ""
+msgstr "Toon alle types in de 'meer' link"
 
 #: ./relateditems.py:410
 msgid "This portlet displays recent Related Items."
-msgstr ""
+msgstr "Deze portlet toon recente gerelateerde items"
 
 #: ./relateditems.py:435
 msgid "This portlet displays related items based on keywords matches, title and related items."
-msgstr ""
+msgstr "Deze portlet toont gerelateerde items gebaseerd op overeenkomsten in onderwerp, titel en gerelateerde items."
 
 #: ./relateditems.py:67
 msgid "Title in portlet."
-msgstr ""
+msgstr "Titel in de portlet."
 
 #: ./relateditems.py:80
 msgid "Workflow state"
-msgstr ""
+msgstr "Workflowstatus"
 
 #. Default: "more ..."
 #: ./relateditems.pt:55
 msgid "more_url"
-msgstr ""
+msgstr "meer..."
 
