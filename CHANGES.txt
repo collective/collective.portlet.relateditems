@@ -4,8 +4,11 @@ Change History
 0.3.5 (unreleased)
 ------------------
 
-- Use the required plone domain in portlets.xml.  That does mean this
-  part is currently not translated.
+- Make sure the portlet title in @@manage-portlets is translated in
+  both Plone 3 (i18n) and Plone 4 (locales).
+  [maurits]
+
+- Use the required plone domain in portlets.xml.
   [maurits]
 
 - Added Dutch translations.

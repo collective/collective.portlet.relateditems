@@ -7,9 +7,13 @@
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="collective.portlet.relateditems">
 
+    <five:registerPackage package="." />
     <i18n:registerTranslations directory="locales" />
     <include package="Products.CMFCore" file="permissions.zcml"
              zcml:condition="have plone-41" />
+    <i18n:registerTranslations
+        directory="plonelocales"
+        zcml:condition="have plone-4" />
     <genericsetup:registerProfile
        name="default"
        title="Related Items"
