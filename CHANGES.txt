@@ -4,7 +4,8 @@ Change History
 0.3.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixed portlet_title on creating
+  [kroman0]
 
 
 0.3.4 - 2011-05-17 
