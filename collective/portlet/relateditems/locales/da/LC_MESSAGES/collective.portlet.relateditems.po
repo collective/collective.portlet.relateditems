@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.portlet.relateditems\n"
-"POT-Creation-Date: 2010-06-10 11:42+0000\n"
+"POT-Creation-Date: 2011-11-15 15:00+0000\n"
 "PO-Revision-Date: 2010-06-10 11:42+0000\n"
 "Last-Translator: Roman Kozlovskiy <kroman0@quintagroup.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.portlet.relateditems\n"
 
-#: ./relateditems.py:405
+#: ./relateditems.py:409
 msgid "Add Related Items Portlet"
 msgstr "Tilføj auto-relateret indhold"
 
@@ -30,7 +30,7 @@ msgstr "Vis beskrivelse"
 msgid "Display recent items on no results fallback"
 msgstr "Vis seneste indhold, hvis ikke noget matcher"
 
-#: ./relateditems.py:429
+#: ./relateditems.py:434
 msgid "Edit Related Items Portlet"
 msgstr "Rediger auto-relateret indhold"
 
@@ -66,6 +66,10 @@ msgstr "Antal links"
 msgid "Portlet title"
 msgstr "Portlet titel"
 
+#: ./relateditems.py:69
+msgid "Related Items"
+msgstr "Autorelateret indhold portlet"
+
 #: ./relateditems.py:108
 msgid "Search only on subject"
 msgstr "Søg kun på emneord"
@@ -78,11 +82,11 @@ msgstr "Vælg hvilke indholdstyper, som det relaterede indhold må have"
 msgid "Show all types in 'more' link"
 msgstr "Vis alle indholdstyper, når man klikker på 'mere'-linket"
 
-#: ./relateditems.py:406
+#: ./relateditems.py:410
 msgid "This portlet displays recent Related Items."
 msgstr "Denne portlet viser automatisk nyest relateret indhold"
 
-#: ./relateditems.py:430
+#: ./relateditems.py:435
 msgid "This portlet displays related items based on keywords matches, title and related items."
 msgstr "Denne portlet viser automatisk relateret indhold baseret på tilsvarende emneord, title og valgt relateret indhold."
 
@@ -96,10 +100,6 @@ msgstr "Workflow tilstand"
 
 #. Default: "more ..."
 #: ./relateditems.pt:55
-msgid "link_more"
-msgstr "Se alle"
-
-msgid "Related Items"
-msgstr "Autorelateret indhold portlet"
-
+msgid "more_url"
+msgstr ""
 

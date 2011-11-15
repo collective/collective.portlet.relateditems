@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.portlet.relateditems\n"
-"POT-Creation-Date: 2010-06-10 11:42+0000\n"
+"POT-Creation-Date: 2011-11-15 15:00+0000\n"
 "PO-Revision-Date: 2008-09-03 09:48+0100\n"
 "Last-Translator: Radim Novotny <novotny.radim@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.portlet.relateditems\n"
 
-#: ./relateditems.py:405
+#: ./relateditems.py:409
 msgid "Add Related Items Portlet"
 msgstr "Přidat portlet s příbuznými položkami podle klíčových slov"
 
@@ -30,7 +30,7 @@ msgstr ""
 msgid "Display recent items on no results fallback"
 msgstr ""
 
-#: ./relateditems.py:429
+#: ./relateditems.py:434
 msgid "Edit Related Items Portlet"
 msgstr "Úpravy"
 
@@ -66,6 +66,10 @@ msgstr "Počet podobných položek k zobrazení"
 msgid "Portlet title"
 msgstr ""
 
+#: ./relateditems.py:69
+msgid "Related Items"
+msgstr ""
+
 #: ./relateditems.py:108
 msgid "Search only on subject"
 msgstr ""
@@ -78,11 +82,11 @@ msgstr "Vyberte, jaké typy položek se mají vyhledávat"
 msgid "Show all types in 'more' link"
 msgstr "Po klepnutí na \"více\" zobrazit všechny typy položek."
 
-#: ./relateditems.py:406
+#: ./relateditems.py:410
 msgid "This portlet displays recent Related Items."
 msgstr "Portlet zobrazuje položky se stejnými klíčovými slovy"
 
-#: ./relateditems.py:430
+#: ./relateditems.py:435
 msgid "This portlet displays related items based on keywords matches, title and related items."
 msgstr ""
 
@@ -96,6 +100,6 @@ msgstr "Stav"
 
 #. Default: "more ..."
 #: ./relateditems.pt:55
-msgid "link_more"
-msgstr "více ..."
+msgid "more_url"
+msgstr ""
 
