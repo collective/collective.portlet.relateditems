@@ -28,7 +28,7 @@ msgstr "Toon beschrijving"
 
 #: ./relateditems.py:114
 msgid "Display recent items on no results fallback"
-msgstr "Val terug op tonen van recente items als er geen andere resultaten."
+msgstr "Val terug op tonen van recente items als er geen andere resultaten zijn."
 
 #: ./relateditems.py:434
 msgid "Edit Related Items Portlet"
@@ -40,7 +40,7 @@ msgstr "Hoeveel items te tonen"
 
 #: ./relateditems.py:101
 msgid "If selected, the 'more' link will display results from all content types instead of restricting to the 'Allowed Types'."
-msgstr "Indien ingeschakeld, toont de 'meer' link resultaten van alle content types in plaats van deze te beperken tot de 'Toegestande types'."
+msgstr "Indien ingeschakeld, toont de 'meer' link resultaten van alle content types in plaats van deze te beperken tot de 'Toegestane types'."
 
 #: ./relateditems.py:115
 msgid "If selected, we will display all allowed items where there are no results for our current related items query"
@@ -48,7 +48,7 @@ msgstr "Indien ingeschakeld, tonen we alle toegestane items als er geen resultat
 
 #: ./relateditems.py:109
 msgid "If selected, we will search only on content subject."
-msgstr "Indien ingeschakeld, zoeken we alleen op de onderwerp (categorie, tags) van de content."
+msgstr "Indien ingeschakeld, zoeken we alleen op het onderwerp (categorie, tags) van de content."
 
 #: ./relateditems.py:123
 msgid "If selected, we will show the content short description"
