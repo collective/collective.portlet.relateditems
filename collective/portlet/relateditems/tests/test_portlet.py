@@ -20,9 +20,9 @@ class TestPortlet(TestCase):
 
     def test_portlet_type_registered(self):
         portlet = getUtility(
-            IPortletType, name='collective.portlet.relateditems.relateditems')
+            IPortletType, name='collective.portlet.relateditems.RelatedItems')
         self.assertEquals(portlet.addview,
-                          'collective.portlet.relateditems.relateditems')
+                          'collective.portlet.relateditems.RelatedItems')
 
     def test_interfaces(self):
         # TODO: Pass any keyword arguments to the Assignment constructor
@@ -32,7 +32,7 @@ class TestPortlet(TestCase):
 
     def test_invoke_add_view(self):
         portlet = getUtility(
-            IPortletType, name='collective.portlet.relateditems.relateditems')
+            IPortletType, name='collective.portlet.relateditems.RelatedItems')
         mapping = self.portal.restrictedTraverse(
             '++contextportlets++plone.leftcolumn')
         for m in mapping.keys():
