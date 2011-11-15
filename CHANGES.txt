@@ -1,6 +1,12 @@
 Change History
 ==============
 
+0.3.5 (unreleased)
+------------------
+
+- Nothing changed yet.
+
+
 0.3.4 - 2011-05-17 
 ------------------
 - adapting to changes in Plone 4.1 (thanks to Daniel Marks/Netsight Internet Solutions)
