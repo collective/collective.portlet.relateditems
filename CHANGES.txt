@@ -4,6 +4,10 @@ Change History
 0.3.5 (unreleased)
 ------------------
 
+- Added MANIFEST.in so .mo files are included in the distribution
+  when available (see zest.pocompile plus zest.releaser).
+  [maurits]
+
 - Fixed error where 'only_subject' was always True after portlet creation.
   [maurits]
 
