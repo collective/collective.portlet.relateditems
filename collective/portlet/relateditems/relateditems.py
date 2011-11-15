@@ -2,7 +2,6 @@ from ZTUtils import make_query
 
 import time
 from zope.interface import implements
-from zope.interface import providedBy
 from Products.ATContentTypes.interface import IATTopic
 
 from zope import schema
@@ -46,6 +45,7 @@ DEFAULT_ALLOWED_TYPES = (
 # used to sanitize search
 def quotestring(s):
     return '"%s"' % s
+
 
 def quote_bad_chars(s):
     bad_chars = ["(", ")"]
@@ -106,7 +106,7 @@ class IRelatedItems(IPortletDataProvider):
 
     only_subject = schema.Bool(
         title=_(u"Search only on subject"),
-        description=_(u"If selected, we will search only on content subject.") ,
+        description=_(u"If selected, we will search only on content subject."),
         default=False,
     )
 
@@ -120,7 +120,8 @@ class IRelatedItems(IPortletDataProvider):
 
     display_description = schema.Bool(
         title=_(u"Display description"),
-        description=_(u"If selected, we will show the content short description"),
+        description=_(
+            u"If selected, we will show the content short description"),
         default=True,
     )
     """"
@@ -133,6 +134,7 @@ class IRelatedItems(IPortletDataProvider):
     )
     """
 
+
 class Assignment(base.Assignment):
     """Portlet assignment.
 
@@ -143,21 +145,21 @@ class Assignment(base.Assignment):
     implements(IRelatedItems)
 
     def __init__(self,
-                 portlet_title = u'Related Items',
+                 portlet_title=u'Related Items',
                  count=5,
                  states=('published',),
                  allowed_types=DEFAULT_ALLOWED_TYPES,
                  #show_recent_items=False,
-                 only_subject = False,
+                 only_subject=False,
                  show_all_types=False,
-                 display_description = True,
-                 display_all_fallback = True,
+                 display_description=True,
+                 display_all_fallback=True,
                 ):
         self.portlet_title = portlet_title
         self.count = count
         self.states = states
         self.allowed_types = allowed_types
-        self.only_subject=only_subject,
+        self.only_subject = only_subject,
         #self.show_recent_items = show_recent_items
         self.show_all_types = show_all_types
         self.display_description = display_description
@@ -169,6 +171,7 @@ class Assignment(base.Assignment):
         "manage portlets" screen.
         """
         return self.portlet_title or _(u"Related Items")
+
 
 class Renderer(base.Renderer):
     """Portlet renderer.
@@ -227,7 +230,7 @@ class Renderer(base.Renderer):
             field = context.getField(IMAGE_FIELD_NAME)
             if field is not None:
                 if field.get_size(context) != 0:
-                    scale = 'thumb' #self.prefs.desc_scale_name
+                    scale = 'thumb'  # self.prefs.desc_scale_name
                     return field.tag(context, scale=scale, css_class=css_class)
         return ''
 
@@ -257,7 +260,8 @@ class Renderer(base.Renderer):
         # Collection
         if IATTopic.providedBy(self.context):
             try:
-                contents = self.context.queryCatalog(contentFilter={'sort_limit':6})
+                contents = self.context.queryCatalog(
+                contentFilter={'sort_limit': 6})
             except:
                 pass
         # probably a folder
@@ -284,7 +288,7 @@ class Renderer(base.Renderer):
         # Filter out boolean searches and keywords with only one letter
         search_query = [res
                         for res in search_query
-			if not res.lower() in ['not','and','or'] and len(res)!=1]
+            if not res.lower() in ['not', 'and', 'or'] and len(res) != 1]
 
         return search_query
 
@@ -306,10 +310,9 @@ class Renderer(base.Renderer):
 
     def uniq(self, alist):    # Fastest order preserving
         set = {}
-        return [set.setdefault(e,e) for e in alist if e not in set]
+        return [set.setdefault(e, e) for e in alist if e not in set]
 
     def _query(self):
-        keywords = []
         context = aq_inner(self.context)
 
         contents = [self.context]
@@ -323,11 +326,11 @@ class Renderer(base.Renderer):
             # Add references and back-references (related items)
             try:
                 contents += context.getReferences()
-            except Exception, e:
+            except Exception:
                 pass
             try:
                 contents += context.getBackReferences()
-            except Exception, e:
+            except Exception:
                 pass
 
         contents += folder_contents
@@ -365,8 +368,8 @@ class Renderer(base.Renderer):
         # increase by one since we'll get the current item
         extra_limit = limit + len(exclude_items)
 
-        query = dict(portal_type = self.data.allowed_types,
-                     SearchableText = search_query,
+        query = dict(portal_type=self.data.allowed_types,
+                     SearchableText=search_query,
                      sort_limit=extra_limit)
         if self.data.only_subject:
             query['Subject'] = self.context.Subject()
@@ -384,7 +387,7 @@ class Renderer(base.Renderer):
 
         #if self.data.show_recent_items and self.all_results == []:
         if self.data.display_all_fallback and (self.all_results == []):
-            results = catalog(portal_type = self.data.allowed_types,
+            results = catalog(portal_type=self.data.allowed_types,
                               sort_on='modified',
                               sort_order='reverse',
                               sort_limit=extra_limit)
@@ -393,6 +396,7 @@ class Renderer(base.Renderer):
                                 if not res.getPath() in exclude_items]
 
         return self.all_results[:limit]
+
 
 class AddForm(base.AddForm):
     """Portlet add form.
@@ -407,7 +411,7 @@ class AddForm(base.AddForm):
 
     def create(self, data):
         return Assignment(
-            portlet_title = data.get('portlet_title', u'Related Items'),
+            portlet_title=data.get('portlet_title', u'Related Items'),
             count=data.get('count', 5),
             states=data.get('states', ('published',)),
             allowed_types=data.get('allowed_types',
@@ -415,9 +419,10 @@ class AddForm(base.AddForm):
             #show_recent_items=data.get('show_recent_items', False),
             only_subject=data.get('only_subject', False),
             show_all_types=data.get('show_all_types', False),
-            display_all_fallback = data.get('display_all_fallback', True),
-            display_description = data.get('display_description', True),
+            display_all_fallback=data.get('display_all_fallback', True),
+            display_description=data.get('display_description', True),
         )
+
 
 class EditForm(base.EditForm):
     """Portlet edit form.
