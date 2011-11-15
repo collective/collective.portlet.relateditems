@@ -37,7 +37,8 @@ setup(name='collective.portlet.relateditems',
           'setuptools',
           # -*- Extra requirements: -*-
       ],
-      entry_points="""
       # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
       )
