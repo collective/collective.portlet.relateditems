@@ -1,7 +1,7 @@
 Change History
 ==============
 
-0.3.5 (unreleased)
+0.3.5 (2011-12-01)
 ------------------
 
 - Make sure the portlet title in @@manage-portlets is translated in
