@@ -9,7 +9,7 @@ def read(*rnames):
 long_description = (
     read('README.txt')
     + '\n' +
-    read('CHANGES.txt')
+    read('CHANGES.rst')
 )
 
 setup(name='collective.portlet.relateditems',
