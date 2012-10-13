@@ -46,8 +46,6 @@ The portlet has the following options available to it on the Add screen.
 
 Repository
 ------------
- * plone `svn-collective`_
+ * plone `github collective`_
 
-.. _svn-collective: http://svn.plone.org/svn/collective/collective.portlet.relateditems/
-
-
+.. _`github collective`: https://github.com/collective/collective.portlet.relateditems
