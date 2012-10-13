@@ -4,7 +4,8 @@ Change History
 0.3.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixed long description of package.
+  [maurits]
 
 
 0.3.6 (2012-10-14)
