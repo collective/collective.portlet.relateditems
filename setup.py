@@ -4,7 +4,7 @@ version = '0.3.7.dev0'
 
 long_description = (
     open('README.txt').read().strip()
-    + '\n' +
+    + '\n\n' +
     open('CHANGES.rst').read().strip()
 )
 
