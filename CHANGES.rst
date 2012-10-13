@@ -1,7 +1,7 @@
 Change History
 ==============
 
-0.3.7 (unreleased)
+0.3.7 (2012-10-14)
 ------------------
 
 - Fixed long description of package.
