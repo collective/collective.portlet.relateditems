@@ -1,15 +1,11 @@
-import os
 from setuptools import setup, find_packages
 
 version = '0.3.6dev'
 
-def read(*rnames):
-    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
-
 long_description = (
-    read('README.txt')
+    open('README.txt').read().strip()
     + '\n' +
-    read('CHANGES.rst')
+    open('CHANGES.rst').read().strip()
 )
 
 setup(name='collective.portlet.relateditems',
@@ -18,12 +14,12 @@ setup(name='collective.portlet.relateditems',
       long_description=long_description,
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
-        "Framework :: Plone",
-        "Framework :: Zope2",
-        "Framework :: Zope3",
-        "Programming Language :: Python",
-        "Topic :: Software Development :: Libraries :: Python Modules",
-        ],
+          "Framework :: Plone",
+          "Framework :: Zope2",
+          "Framework :: Zope3",
+          "Programming Language :: Python",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+          ],
       keywords='related, categories, keywords',
       author='Rui Guerra, kiorky',
       author_email='rui AT v2 DOT nl, kiorky <kiorky@cryptelium.net>, David Jonas <david@intk.com>',
