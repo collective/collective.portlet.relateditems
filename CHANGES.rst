@@ -4,7 +4,9 @@ Change History
 0.3.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Moved to
+  https://github.com/collective/collective.portlet.relateditems
+  [maurits]
 
 
 0.3.5 (2011-12-01)
