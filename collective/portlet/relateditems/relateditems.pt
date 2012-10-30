@@ -7,7 +7,8 @@
         <span class="portletTopRight"></span>
     </dt>
 
-    <tal:rep tal:define="related_items view/getRelatedItems;"
+    <tal:rep tal:define="related_items view/getRelatedItems;
+                         use_view_action site_properties/typesUseViewActionInListings|python:();"
              tal:repeat="item related_items">
         <dd tal:define="oddrow repeat/item/odd;
                         plone_view context/@@plone;
@@ -18,7 +19,7 @@
             tal:attributes="class python:oddrow and 'portletItem even' or 'portletItem odd'">
 
             <a href=""
-               tal:attributes="href string:${item/getURL}/view;
+               tal:attributes="href python:item.Type in use_view_action and itemgetURL() + '/view' or item.getURL();
                                title item/Description">
                 <img src="" alt=""
                      tal:condition="exists:item_object/image_tile"
