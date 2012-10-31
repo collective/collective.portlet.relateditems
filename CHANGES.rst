@@ -4,7 +4,8 @@ Change History
 0.3.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- portlet uses property 'typesUseViewActionInListings' to determine whether
+  /view should be appended to the item's URL [huubbouma]
 
 
 0.3.7 (2012-10-14)
