@@ -1,7 +1,7 @@
 Change History
 ==============
 
-0.3.8 (unreleased)
+0.3.8 (2012-10-31)
 ------------------
 
 - Portlet uses property 'typesUseViewActionInListings' to determine whether
