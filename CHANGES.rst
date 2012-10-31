@@ -4,8 +4,9 @@ Change History
 0.3.8 (unreleased)
 ------------------
 
-- portlet uses property 'typesUseViewActionInListings' to determine whether
-  /view should be appended to the item's URL [huubbouma]
+- Portlet uses property 'typesUseViewActionInListings' to determine whether
+  /view should be appended to the URL of the item.
+  [huubbouma]
 
 
 0.3.7 (2012-10-14)
