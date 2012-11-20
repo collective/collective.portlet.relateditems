@@ -4,7 +4,8 @@ Change History
 0.3.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix package distribution.
+  [hvelarde]
 
 
 0.3.8 (2012-10-31)
