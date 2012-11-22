@@ -1,7 +1,7 @@
 Change History
 ==============
 
-0.3.9 (unreleased)
+0.3.9 (2012-11-22)
 ------------------
 
 - Fix package distribution.
