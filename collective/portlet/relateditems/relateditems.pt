@@ -31,7 +31,7 @@
 				<span class="relatedTitle" tal:content="item/Title"></span></a>
 
 				<div tal:define="showTime python:view.showTime(item)" tal:omit-tag="">
-					<span tal:condition="python:item.end < view.currenttime()" tal:omit-tag="">
+					<span tal:condition="python:item.end &lt; view.currenttime()" tal:omit-tag="">
 						<span class="relatedDate pastDate" tal:content="python:toLocalizedTime(item.start, long_format=showTime)">
 		                May 5
 		                </span>
