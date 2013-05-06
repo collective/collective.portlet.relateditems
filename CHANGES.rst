@@ -1,7 +1,7 @@
 Change History
 ==============
 
-0.3.10 (unreleased)
+0.3.10 (2013-05-06)
 -------------------
 
 - Fixed Unauthorized exception when customizing the portlet in
