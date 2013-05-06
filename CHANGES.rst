@@ -4,7 +4,9 @@ Change History
 0.3.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fixed Unauthorized exception when customizing the portlet in
+  portal_view_customizations.
+  [maurits]
 
 
 0.3.9 (2012-11-22)

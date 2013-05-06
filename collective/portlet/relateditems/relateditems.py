@@ -215,6 +215,9 @@ class Renderer(base.Renderer):
     def currenttime(self):
         return time.time()
 
+    def showTime(self, item):
+        return item.start.TimeMinutes() != '00:00' and item.end.TimeMinutes()
+
     @property
     def prefs(self):
         res = ''
