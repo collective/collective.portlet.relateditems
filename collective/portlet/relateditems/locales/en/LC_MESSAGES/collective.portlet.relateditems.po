@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-11-15 15:03+0000\n"
+"POT-Creation-Date: 2013-05-06 08:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ./relateditems.py:409
+#: ./relateditems.py:412
 msgid "Add Related Items Portlet"
 msgstr ""
 
@@ -30,7 +30,7 @@ msgstr ""
 msgid "Display recent items on no results fallback"
 msgstr ""
 
-#: ./relateditems.py:434
+#: ./relateditems.py:437
 msgid "Edit Related Items Portlet"
 msgstr ""
 
@@ -82,11 +82,11 @@ msgstr ""
 msgid "Show all types in 'more' link"
 msgstr ""
 
-#: ./relateditems.py:410
+#: ./relateditems.py:413
 msgid "This portlet displays recent Related Items."
 msgstr ""
 
-#: ./relateditems.py:435
+#: ./relateditems.py:438
 msgid "This portlet displays related items based on keywords matches, title and related items."
 msgstr ""
 
@@ -99,7 +99,7 @@ msgid "Workflow state"
 msgstr ""
 
 #. Default: "more ..."
-#: ./relateditems.pt:55
+#: ./relateditems.pt:56
 msgid "more_url"
 msgstr ""
 

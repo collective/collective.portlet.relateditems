@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.portlet.relateditems 0.x\n"
-"POT-Creation-Date: 2011-11-15 15:03+0000\n"
+"POT-Creation-Date: 2013-05-06 08:56+0000\n"
 "PO-Revision-Date: 2011-11-15 16:49+0100\n"
 "Last-Translator: Maurits van Rees <m.van.rees@zestsoftware.nl>\n"
 "Language-Team: Plone Nederland <plone-nl@lists.plone.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.portlet.relateditems\n"
 
-#: ./relateditems.py:409
+#: ./relateditems.py:412
 msgid "Add Related Items Portlet"
 msgstr "Voeg Gerelateerde items portlet toe"
 
@@ -30,7 +30,7 @@ msgstr "Toon beschrijving"
 msgid "Display recent items on no results fallback"
 msgstr "Val terug op tonen van recente items als er geen andere resultaten zijn."
 
-#: ./relateditems.py:434
+#: ./relateditems.py:437
 msgid "Edit Related Items Portlet"
 msgstr "Bewerk Gerelateerde items portlet"
 
@@ -82,11 +82,11 @@ msgstr "Selecteer de content types die getoond moeten worden."
 msgid "Show all types in 'more' link"
 msgstr "Toon alle types in de 'meer' link"
 
-#: ./relateditems.py:410
+#: ./relateditems.py:413
 msgid "This portlet displays recent Related Items."
 msgstr "Deze portlet toon recente gerelateerde items"
 
-#: ./relateditems.py:435
+#: ./relateditems.py:438
 msgid "This portlet displays related items based on keywords matches, title and related items."
 msgstr "Deze portlet toont gerelateerde items gebaseerd op overeenkomsten in onderwerp, titel en gerelateerde items."
 
@@ -99,7 +99,7 @@ msgid "Workflow state"
 msgstr "Workflowstatus"
 
 #. Default: "more ..."
-#: ./relateditems.pt:55
+#: ./relateditems.pt:56
 msgid "more_url"
 msgstr "meer..."
 
