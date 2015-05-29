@@ -14,6 +14,7 @@ from plone.app.portlets.cache import render_cachekey
 from plone.memoize import ram
 from plone.memoize.compress import xhtml_compress
 from plone.memoize.instance import memoize
+from zope.schema.vocabulary import SimpleVocabulary
 
 from Acquisition import aq_inner
 
@@ -40,6 +41,13 @@ DEFAULT_ALLOWED_TYPES = (
     'File',
     'Image',
 )
+
+
+SORTING_CRITERIA = SimpleVocabulary.fromItems((
+    (_(u"Modification date"), "modified"),
+    (_(u"Effective date"), "effective"),
+    (_(u"Creation date"), "created"),
+))
 
 
 # used to sanitize search
@@ -96,6 +104,14 @@ class IRelatedItems(IPortletDataProvider):
         )
     )
 
+    sorting = schema.Choice(
+        title=_(u"Sorting criteria"),
+        description=_(u"Select the sorting criteria for the collected contents."),
+        default='modified',
+        required=True,
+        vocabulary=SORTING_CRITERIA,
+    )
+
     show_all_types = schema.Bool(
         title=_(u"Show all types in 'more' link"),
         description=_(u"If selected, the 'more' link will display "
@@ -149,6 +165,7 @@ class Assignment(base.Assignment):
                  count=5,
                  states=('published',),
                  allowed_types=DEFAULT_ALLOWED_TYPES,
+                 sorting='modified',
                  #show_recent_items=False,
                  only_subject=False,
                  show_all_types=False,
@@ -159,6 +176,7 @@ class Assignment(base.Assignment):
         self.count = count
         self.states = states
         self.allowed_types = allowed_types
+        self.sorting = sorting
         self.only_subject = only_subject
         #self.show_recent_items = show_recent_items
         self.show_all_types = show_all_types
@@ -373,6 +391,8 @@ class Renderer(base.Renderer):
 
         query = dict(portal_type=self.data.allowed_types,
                      SearchableText=search_query,
+                     sort_on=self.data.sorting,
+                     sort_order='reverse',
                      sort_limit=extra_limit)
         if self.data.only_subject:
             query['Subject'] = self.context.Subject()
@@ -391,7 +411,7 @@ class Renderer(base.Renderer):
         #if self.data.show_recent_items and self.all_results == []:
         if self.data.display_all_fallback and (self.all_results == []):
             results = catalog(portal_type=self.data.allowed_types,
-                              sort_on='modified',
+                              sort_on=self.data.sorting,
                               sort_order='reverse',
                               sort_limit=extra_limit)
             self.all_results = [res
