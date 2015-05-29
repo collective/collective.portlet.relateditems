@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.portlet.relateditems 0.x\n"
-"POT-Creation-Date: 2013-05-06 08:56+0000\n"
+"POT-Creation-Date: 2015-05-29 08:43+0000\n"
 "PO-Revision-Date: 2011-11-15 16:49+0100\n"
 "Last-Translator: Maurits van Rees <m.van.rees@zestsoftware.nl>\n"
 "Language-Team: Plone Nederland <plone-nl@lists.plone.org>\n"
@@ -14,87 +14,107 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.portlet.relateditems\n"
 
-#: ./relateditems.py:412
+#: ./relateditems.py:432
 msgid "Add Related Items Portlet"
 msgstr "Voeg Gerelateerde items portlet toe"
 
-#: ./relateditems.py:90
+#: ./relateditems.py:98
 msgid "Allowed Types"
 msgstr "Toegestane types"
 
-#: ./relateditems.py:122
+#: ./relateditems.py:49
+msgid "Creation date"
+msgstr ""
+
+#: ./relateditems.py:138
 msgid "Display description"
 msgstr "Toon beschrijving"
 
-#: ./relateditems.py:114
+#: ./relateditems.py:130
 msgid "Display recent items on no results fallback"
 msgstr "Val terug op tonen van recente items als er geen andere resultaten zijn."
 
-#: ./relateditems.py:437
+#: ./relateditems.py:457
 msgid "Edit Related Items Portlet"
 msgstr "Bewerk Gerelateerde items portlet"
 
-#: ./relateditems.py:74
+#: ./relateditems.py:48
+msgid "Effective date"
+msgstr ""
+
+#: ./relateditems.py:82
 msgid "How many related items to list."
 msgstr "Hoeveel items te tonen"
 
-#: ./relateditems.py:101
+#: ./relateditems.py:117
 msgid "If selected, the 'more' link will display results from all content types instead of restricting to the 'Allowed Types'."
 msgstr "Indien ingeschakeld, toont de 'meer' link resultaten van alle content types in plaats van deze te beperken tot de 'Toegestane types'."
 
-#: ./relateditems.py:115
+#: ./relateditems.py:131
 msgid "If selected, we will display all allowed items where there are no results for our current related items query"
 msgstr "Indien ingeschakeld, tonen we alle toegestane items als er geen resultaten zijn voor de huidige gerelateerde items zoekopdracht."
 
-#: ./relateditems.py:109
+#: ./relateditems.py:125
 msgid "If selected, we will search only on content subject."
 msgstr "Indien ingeschakeld, zoeken we alleen op het onderwerp (categorie, tags) van de content."
 
-#: ./relateditems.py:123
+#: ./relateditems.py:139
 msgid "If selected, we will show the content short description"
 msgstr "Indien ingeschakeld, tonen we de beschrijving van de content"
 
-#: ./relateditems.py:81
+#: ./relateditems.py:89
 msgid "Items in which workflow state to show."
 msgstr "Toon items met deze workflow statussen."
 
-#: ./relateditems.py:73
+#: ./relateditems.py:47
+msgid "Modification date"
+msgstr ""
+
+#: ./relateditems.py:81
 msgid "Number of related items to display"
 msgstr "Aantal gerelateerde items om te tonen"
 
-#: ./relateditems.py:66
+#: ./relateditems.py:74
 msgid "Portlet title"
 msgstr "Titel van de portlet"
 
-#: ./relateditems.py:69
+#: ./relateditems.py:77
 msgid "Related Items"
 msgstr "Gerelateerde items"
 
-#: ./relateditems.py:108
+#: ./relateditems.py:124
 msgid "Search only on subject"
 msgstr "Zoek alleen op onderwerp"
 
-#: ./relateditems.py:91
+#: ./relateditems.py:99
 msgid "Select the content types that should be shown."
 msgstr "Selecteer de content types die getoond moeten worden."
 
-#: ./relateditems.py:100
+#: ./relateditems.py:109
+msgid "Select the sorting criteria for the collected contents."
+msgstr ""
+
+#: ./relateditems.py:116
 msgid "Show all types in 'more' link"
 msgstr "Toon alle types in de 'meer' link"
 
-#: ./relateditems.py:413
+#: ./relateditems.py:108
+msgid "Sorting criteria"
+msgstr ""
+
+#: ./relateditems.py:433
 msgid "This portlet displays recent Related Items."
 msgstr "Deze portlet toon recente gerelateerde items"
 
-#: ./relateditems.py:438
+#: ./relateditems.py:458
 msgid "This portlet displays related items based on keywords matches, title and related items."
 msgstr "Deze portlet toont gerelateerde items gebaseerd op overeenkomsten in onderwerp, titel en gerelateerde items."
 
-#: ./relateditems.py:67
+#: ./relateditems.py:75
 msgid "Title in portlet."
 msgstr "Titel in de portlet."
 
-#: ./relateditems.py:80
+#: ./relateditems.py:88
 msgid "Workflow state"
 msgstr "Workflowstatus"
 
