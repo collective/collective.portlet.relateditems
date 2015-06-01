@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-05-06 08:56+0000\n"
+"POT-Creation-Date: 2015-05-29 08:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,87 +17,107 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.portlet.relateditems\n"
 
-#: ./relateditems.py:412
+#: ./relateditems.py:432
 msgid "Add Related Items Portlet"
 msgstr ""
 
-#: ./relateditems.py:90
+#: ./relateditems.py:98
 msgid "Allowed Types"
 msgstr ""
 
-#: ./relateditems.py:122
+#: ./relateditems.py:49
+msgid "Creation date"
+msgstr ""
+
+#: ./relateditems.py:138
 msgid "Display description"
 msgstr ""
 
-#: ./relateditems.py:114
+#: ./relateditems.py:130
 msgid "Display recent items on no results fallback"
 msgstr ""
 
-#: ./relateditems.py:437
+#: ./relateditems.py:457
 msgid "Edit Related Items Portlet"
 msgstr ""
 
-#: ./relateditems.py:74
+#: ./relateditems.py:48
+msgid "Effective date"
+msgstr ""
+
+#: ./relateditems.py:82
 msgid "How many related items to list."
 msgstr ""
 
-#: ./relateditems.py:101
+#: ./relateditems.py:117
 msgid "If selected, the 'more' link will display results from all content types instead of restricting to the 'Allowed Types'."
 msgstr ""
 
-#: ./relateditems.py:115
+#: ./relateditems.py:131
 msgid "If selected, we will display all allowed items where there are no results for our current related items query"
 msgstr ""
 
-#: ./relateditems.py:109
+#: ./relateditems.py:125
 msgid "If selected, we will search only on content subject."
 msgstr ""
 
-#: ./relateditems.py:123
+#: ./relateditems.py:139
 msgid "If selected, we will show the content short description"
 msgstr ""
 
-#: ./relateditems.py:81
+#: ./relateditems.py:89
 msgid "Items in which workflow state to show."
 msgstr ""
 
-#: ./relateditems.py:73
+#: ./relateditems.py:47
+msgid "Modification date"
+msgstr ""
+
+#: ./relateditems.py:81
 msgid "Number of related items to display"
 msgstr ""
 
-#: ./relateditems.py:66
+#: ./relateditems.py:74
 msgid "Portlet title"
 msgstr ""
 
-#: ./relateditems.py:69
+#: ./relateditems.py:77
 msgid "Related Items"
 msgstr ""
 
-#: ./relateditems.py:108
+#: ./relateditems.py:124
 msgid "Search only on subject"
 msgstr ""
 
-#: ./relateditems.py:91
+#: ./relateditems.py:99
 msgid "Select the content types that should be shown."
 msgstr ""
 
-#: ./relateditems.py:100
+#: ./relateditems.py:109
+msgid "Select the sorting criteria for the collected contents."
+msgstr ""
+
+#: ./relateditems.py:116
 msgid "Show all types in 'more' link"
 msgstr ""
 
-#: ./relateditems.py:413
+#: ./relateditems.py:108
+msgid "Sorting criteria"
+msgstr ""
+
+#: ./relateditems.py:433
 msgid "This portlet displays recent Related Items."
 msgstr ""
 
-#: ./relateditems.py:438
+#: ./relateditems.py:458
 msgid "This portlet displays related items based on keywords matches, title and related items."
 msgstr ""
 
-#: ./relateditems.py:67
+#: ./relateditems.py:75
 msgid "Title in portlet."
 msgstr ""
 
-#: ./relateditems.py:80
+#: ./relateditems.py:88
 msgid "Workflow state"
 msgstr ""
 

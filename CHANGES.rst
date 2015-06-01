@@ -4,7 +4,10 @@ Change History
 0.3.11 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- French translation
+  [ebrehault]
+- Add a sorting criteria
+  [ebrehault]
 
 
 0.3.10 (2013-05-06)
