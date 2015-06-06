@@ -391,7 +391,7 @@ class Renderer(base.Renderer):
 
         query = dict(portal_type=self.data.allowed_types,
                      SearchableText=search_query,
-                     sort_on=self.data.sorting,
+                     sort_on=getattr(self.data, "sorting", "modified"),
                      sort_order='reverse',
                      sort_limit=extra_limit)
         if self.data.only_subject:
@@ -411,9 +411,9 @@ class Renderer(base.Renderer):
         #if self.data.show_recent_items and self.all_results == []:
         if self.data.display_all_fallback and (self.all_results == []):
             results = catalog(portal_type=self.data.allowed_types,
-                              sort_on=self.data.sorting,
-                              sort_order='reverse',
-                              sort_limit=extra_limit)
+                sort_on=getattr(self.data, "sorting", "modified"),
+                sort_order='reverse',
+                sort_limit=extra_limit)
             self.all_results = [res
                                 for res in results
                                 if not res.getPath() in exclude_items]
