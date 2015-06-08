@@ -1,7 +1,7 @@
 Change History
 ==============
 
-0.3.11 (unreleased)
+0.3.11 (2015-06-08)
 -------------------
 
 - French translation
