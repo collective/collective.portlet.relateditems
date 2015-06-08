@@ -39,6 +39,9 @@ setup(name='collective.portlet.relateditems',
           'setuptools',
           # -*- Extra requirements: -*-
       ],
+      extras_require={
+          'test': ['Products.PloneTestCase'],
+          },
       entry_points="""
       # -*- Entry points: -*-
       [z3c.autoinclude.plugin]
